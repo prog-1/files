@@ -2,9 +2,9 @@
 
 ## Important packages
 
-`os` - Package os provides a platform-independent interface to operating system functionality. 
-`io` - Package io provides basic interfaces to I/O primitives.
-`bufio` - Package bufio implements buffered I/O.
+* `os` - Package os provides a platform-independent interface to operating system functionality.
+* `io` - Package io provides basic interfaces to I/O primitives.
+* `bufio` - Package bufio implements buffered I/O.
 
 ## Open and read files
 
