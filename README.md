@@ -5,6 +5,7 @@
 * `os` - Package os provides a platform-independent interface to operating system functionality.
 * `io` - Package io provides basic interfaces to I/O primitives.
 * `bufio` - Package bufio implements buffered I/O.
+* `fmt` - Package fmt implements formatted I/O.
 
 ## Open and read files
 
@@ -29,7 +30,7 @@ fmt.Printf("read %d bytes: %q\n", count, data[:count])
 ## Scan lines from a file
 
 ```go
-f, err := os.Open("file.go")
+f, err := os.Open("file.txt")
 if err != nil {
   log.Fatal(err)
 }
@@ -44,3 +45,18 @@ if err := s.Err(); err != nil {
 }
 ```
 
+## Reading integers from a file
+
+`Scan`, `Scanf` and `Scanln` read from `os.Stdin`; `Fscan`, `Fscanf` and `Fscanln` read from a specified `io.Reader`.
+
+```
+f, err := os.Open("file.txt")
+if err != nil {
+  log.Fatal(err)
+}
+defer f.Close()
+
+var x, y int
+fmt.Fscan(&x, &y)
+fmt.Printf("x = %d\ny = %d\n", x, y)
+```
