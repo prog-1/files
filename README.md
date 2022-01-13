@@ -57,6 +57,6 @@ if err != nil {
 defer f.Close()
 
 var x, y int
-fmt.Fscan(&x, &y)
+fmt.Fscan(f, &x, &y)
 fmt.Printf("x = %d\ny = %d\n", x, y)
 ```
