@@ -10,7 +10,7 @@
 ## Open and read files
 
 ```go
-file, err := os.Open("file.go") // For read access.
+file, err := os.Open("file.txt") // For read access.
 if err != nil {
 	log.Fatal(err)
 }
