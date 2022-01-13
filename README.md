@@ -49,7 +49,7 @@ if err := s.Err(); err != nil {
 
 `Scan`, `Scanf` and `Scanln` read from `os.Stdin`; `Fscan`, `Fscanf` and `Fscanln` read from a specified `io.Reader`.
 
-```
+```go
 f, err := os.Open("file.txt")
 if err != nil {
   log.Fatal(err)
